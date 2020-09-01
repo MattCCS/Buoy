@@ -15,6 +15,7 @@ def shrink(audio_path, tempdir, name):
     args = [
         'ffmpeg',
         '-i', audio_path,
+        '-vn',  # no video
         '-ac', '1',  # channels=1
         '-ab', BITRATE,  # bitrate=BITRATE
         out_path,

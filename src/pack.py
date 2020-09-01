@@ -40,7 +40,7 @@ def draw_text(img):
 
 
 def make_msg(data):
-    head = "BUOY Message\nSent by:Matt Cotton\ngeo:45.264612,-72.135512\ntel:6175550123\nBASE64:".encode("utf-8")
+    head = f"BUOY Message\nSent by:Matt Cotton\ngeo:{data['gps']}\ntel:6175550123\nBASE64:".encode("utf-8")
     # tail = base64.b64encode(msgpack.dumps(data))
     tail = repr(data).encode("utf-8")
     msg = head + tail
